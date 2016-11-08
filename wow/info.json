@@ -1,6 +1,7 @@
 {
+    "NAME" : "Wow",
     "AUTHOR" : "Brandon Risberg",
-    "DESCRIPTION" : "Collection of Wow related memes and commands",
-    "DISABLED" : false,
-    "NAME" : "Wow Memes"
+    "SHORT" : "Asorted Wow related meme comamnds/",
+    "DESCRIPTION" : "Plays audio for Wow related memes (such as Flame Wreath), as well as audo from Xal'atath, Blade of the Black Empire",
+    "DISABLED" : false
 }

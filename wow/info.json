@@ -1,7 +1,7 @@
 {
     "NAME" : "Wow",
     "AUTHOR" : "Brandon Risberg",
-    "SHORT" : "Asorted Wow related meme comamnds.",
-    "DESCRIPTION" : "Plays audio for Wow related memes (such as Flame Wreath), as well as audo from Xal'atath, Blade of the Black Empire",
+    "SHORT" : "Requires Audio cog. Asorted Wow related meme comamnds.",
+    "DESCRIPTION" : "Requires Audio cog. Plays audio for Wow related memes (such as Flame Wreath), as well as audo from Xal'atath, Blade of the Black Empire",
     "DISABLED" : false
 }

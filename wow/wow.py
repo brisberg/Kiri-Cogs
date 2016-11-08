@@ -18,6 +18,9 @@ class WowCog:
         """I will not move when Flame Wreath is cast!"""
         url = "https://www.youtube.com/watch?v=gcA6y7sxKcA"
         audio = self.bot.get_cog('Audio')
+        if not audio:
+            await self.bot.say("Audio module required. Load with {}load audio".format(ctx.prefix))
+            return
         await ctx.invoke(audio.play, url_or_search_terms=url)
 
 def setup(bot):

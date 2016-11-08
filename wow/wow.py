@@ -17,7 +17,8 @@ class WowCog:
     async def flamewreath(self, ctx):
         """I will not move when Flame Wreath is cast!"""
         url = "https://www.youtube.com/watch?v=gcA6y7sxKcA"
-        await ctx.invoke(self.play, url_or_search_terms=url)
+        audio = self.bot.get_cog('Audio')
+        await ctx.invoke(audio.play, url_or_search_terms=url)
 
 def setup(bot):
     bot.add_cog(WowCog(bot))

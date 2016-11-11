@@ -8,7 +8,7 @@ class ReactionsCog:
     def __init__(self, bot):
         self.bot = bot
 
-    def _play(self, url, ctx):
+    async def _play(self, url, ctx):
         """Helper for aliasing Play in the Audio module"""
         audio = self.bot.get_cog('Audio')
         if not audio:
@@ -19,13 +19,13 @@ class ReactionsCog:
     @commands.command(pass_context=True, no_pm=True)
     async def fail(self, ctx):
         """You have failed horribly!"""
-        _play("https://www.youtube.com/watch?v=1ytCEuuW2_A", ctx)
+        await self._play("https://www.youtube.com/watch?v=1ytCEuuW2_A", ctx)
 
     @commands.command(pass_context=True, no_pm=True)
     async def goofy(self, ctx):
         """Goofy yell!"""
-        _play("https://www.youtube.com/watch?v=MUL5w91dzbo", ctx)
+        await self._play("https://www.youtube.com/watch?v=MUL5w91dzbo", ctx)
 
 
 def setup(bot):
-    bot.add_cog(WowCog(bot))
+    bot.add_cog(ReactionsCog(bot))

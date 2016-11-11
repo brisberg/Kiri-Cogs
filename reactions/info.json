@@ -1,0 +1,7 @@
+{
+    "NAME" : "Reactions",
+    "AUTHOR" : "Brandon Risberg",
+    "SHORT" : "Requires Audio cog. Asorted reaction sound effects",
+    "DESCRIPTION" : "Requires Audio cog. Plays audio several reaction sound effects",
+    "DISABLED" : false
+}

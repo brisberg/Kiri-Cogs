@@ -16,6 +16,14 @@ class ReactionsCog:
             return
         await ctx.invoke(audio.play, url_or_search_terms=url)
 
+    async def _play_local(self, url, ctx):
+        """Helper for aliasing Play_local in the Audio module"""
+        audio = self.bot.get_cog('Audio')
+        if not audio:
+            await self.bot.say("Audio module required. Load with: {}load audio".format(ctx.prefix))
+            return
+        await ctx.invoke(audio.play_local, url_or_search_terms=url)
+
     @commands.command(pass_context=True, no_pm=True)
     async def fail(self, ctx):
         """You have failed horribly!"""

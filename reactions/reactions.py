@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 
 
@@ -6,6 +7,7 @@ class ReactionsCog:
     """Custom Cog that had commands for Reaction sounds"""
 
     def __init__(self, bot):
+        self.cog_name = 'reactions'
         self.bot = bot
 
     async def _play(self, url, ctx):
@@ -33,6 +35,12 @@ class ReactionsCog:
     async def goofy(self, ctx):
         """Goofy yell!"""
         await self._play("https://www.youtube.com/watch?v=MUL5w91dzbo", ctx)
+
+    @commands.command(pass_context=True, no_pm=True)
+    async def wilhelm(self, ctx):
+        """Wilhelm Scream"""
+        await self._play(os.path.join("data", self.cog_name,
+                         "Wilhelm_Scream.ogg"), ctx)
 
 
 def setup(bot):
